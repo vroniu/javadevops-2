@@ -21,7 +21,7 @@ provider "aws" {
 
 // Set up a VPC with a public subnet for instances
 resource "aws_vpc" "main" {
-    cidr_block = "10.0.0.0/28"
+    cidr_block = var.vpc_cidr
     enable_dns_hostnames = true
 
     tags = {
@@ -31,7 +31,7 @@ resource "aws_vpc" "main" {
 
 resource "aws_subnet" "public-subnet" {
     vpc_id = aws_vpc.main.id
-    cidr_block = "10.0.0.0/28"
+    cidr_block = var.subnet_cidr
     map_public_ip_on_launch = true
 
     tags = {
@@ -100,6 +100,43 @@ resource "aws_security_group" "sg-allow-internet-access" {
     }
 }
 
+// Security group that allows in/out traffic only within the local subnet
+resource "aws_security_group" "sg-allow-subnet-access" {
+    name = "allow-subnet-access"
+    vpc_id = aws_vpc.main.id
+    egress {
+        from_port = 0
+        to_port = 0
+        protocol = -1
+        cidr_blocks = [var.subnet_cidr]
+    }
+
+    ingress {
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        cidr_blocks = [var.subnet_cidr]
+    }
+    ingress {
+        from_port = 443
+        to_port = 443
+        protocol = "tcp"
+        cidr_blocks = [var.subnet_cidr]
+    }
+    ingress {
+        from_port = 22
+        to_port = 22
+        protocol = "tcp"
+        cidr_blocks = [var.subnet_cidr]
+    }
+    ingress {
+        from_port = -1
+        to_port = -1
+        protocol = "icmp"
+        cidr_blocks = [var.subnet_cidr]
+    }
+}
+
 // Set up key-pair to log in to the instances via SSH
 resource "tls_private_key" "rsa" {
     algorithm = "RSA"
@@ -121,6 +158,7 @@ resource "aws_instance" "amazon-linux-instance" {
     instance_type = "t2.micro"
     ami = "ami-0592c673f0b1e7665"
     subnet_id = aws_subnet.public-subnet.id
+    vpc_security_group_ids = [aws_security_group.sg-allow-subnet-access.id]
     key_name = "ssh-keypair"
 
     tags = {
