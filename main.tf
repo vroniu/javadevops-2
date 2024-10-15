@@ -154,6 +154,11 @@ resource "local_file" "ssh-keypair-private-key" {
     filename = "e2-key.pem"
 }
 
+// Load the install-server script as data source
+data "local_file" "install-server-script" {
+    filename = "install-server.sh"
+}
+
 resource "aws_instance" "amazon-linux-instance" {
     instance_type = "t2.micro"
     ami = "ami-0592c673f0b1e7665"
@@ -172,6 +177,9 @@ resource "aws_instance" "ubuntu-instance" {
     subnet_id = aws_subnet.public-subnet.id
     vpc_security_group_ids = [aws_security_group.sg-allow-internet-access.id]
     key_name = "ssh-keypair"
+
+    user_data_replace_on_change = true
+    user_data = data.local_file.install-server-script.content
 
     tags = {
         Name = "ubuntu-instance"
