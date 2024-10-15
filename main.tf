@@ -102,38 +102,39 @@ resource "aws_security_group" "sg-allow-internet-access" {
 
 // Security group that allows in/out traffic only within the local subnet
 resource "aws_security_group" "sg-allow-subnet-access" {
+    depends_on = [ aws_instance.ubuntu-instance ]
     name = "allow-subnet-access"
     vpc_id = aws_vpc.main.id
     egress {
         from_port = 0
         to_port = 0
         protocol = -1
-        cidr_blocks = [var.subnet_cidr]
+        cidr_blocks = ["${aws_instance.ubuntu-instance.private_ip}/32"]
     }
 
     ingress {
         from_port = 80
         to_port = 80
         protocol = "tcp"
-        cidr_blocks = [var.subnet_cidr]
+        cidr_blocks = ["${aws_instance.ubuntu-instance.private_ip}/32"]
     }
     ingress {
         from_port = 443
         to_port = 443
         protocol = "tcp"
-        cidr_blocks = [var.subnet_cidr]
+        cidr_blocks = ["${aws_instance.ubuntu-instance.private_ip}/32"]
     }
     ingress {
         from_port = 22
         to_port = 22
         protocol = "tcp"
-        cidr_blocks = [var.subnet_cidr]
+        cidr_blocks = ["${aws_instance.ubuntu-instance.private_ip}/32"]
     }
     ingress {
         from_port = -1
         to_port = -1
         protocol = "icmp"
-        cidr_blocks = [var.subnet_cidr]
+        cidr_blocks = ["${aws_instance.ubuntu-instance.private_ip}/32"]
     }
 }
 
@@ -229,3 +230,17 @@ resource "aws_instance" "ubuntu-instance" {
         Name = "ubuntu-instance"
     }
 }
+
+// As a test - add a third instance to verify that it CAN NOT access the Amazon Linux instance
+resource "aws_instance" "test-instance" {
+    instance_type = "t2.micro"
+    ami = data.aws_ami.ubuntu_ami.id
+    subnet_id = aws_subnet.public-subnet.id
+    vpc_security_group_ids = [aws_security_group.sg-allow-internet-access.id]
+    key_name = "ssh-keypair"
+
+    tags = {
+        Name = "test-instance"
+    }
+}
+
