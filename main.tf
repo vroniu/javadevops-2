@@ -154,9 +154,13 @@ resource "local_file" "ssh-keypair-private-key" {
     filename = "e2-key.pem"
 }
 
-// Load the install-server script as data source
+// Load the install scripts as datasources
 data "local_file" "install-server-script" {
     filename = "install-server.sh"
+}
+
+data "local_file" "install-docker-script" {
+    filename = "install-docker.sh"
 }
 
 resource "aws_instance" "amazon-linux-instance" {
@@ -179,7 +183,11 @@ resource "aws_instance" "ubuntu-instance" {
     key_name = "ssh-keypair"
 
     user_data_replace_on_change = true
-    user_data = data.local_file.install-server-script.content
+    user_data = <<-EOT
+        #!/bin/bash
+        ${data.local_file.install-server-script.content}
+        ${data.local_file.install-docker-script.content}
+    EOT
 
     tags = {
         Name = "ubuntu-instance"
