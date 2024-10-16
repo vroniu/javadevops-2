@@ -1,526 +1,530 @@
-data.local_file.install-server-script: Reading...
-data.local_file.install-docker-script: Reading...
-data.local_file.install-docker-script: Read complete after 0s [id=fd9893d13f76630874c326aaa2392354a9a6c274]
-data.local_file.install-server-script: Read complete after 0s [id=5977d24e34769a53d7a6cfa54cabe96f439b6248]
-data.aws_ami.amazon_linux_ami: Reading...
-data.aws_ami.ubuntu_ami: Reading...
-data.aws_ami.amazon_linux_ami: Read complete after 1s [id=ami-0592c673f0b1e7665]
-data.aws_ami.ubuntu_ami: Read complete after 1s [id=ami-0d4a2f1c20fcc71cb]
+[0m[1mdata.local_file.install-server-script: Reading...[0m[0m
+[0m[1mdata.local_file.install-docker-script: Reading...[0m[0m
+[0m[1mdata.local_file.install-server-script: Read complete after 0s [id=5977d24e34769a53d7a6cfa54cabe96f439b6248][0m
+[0m[1mdata.local_file.install-docker-script: Read complete after 0s [id=fd9893d13f76630874c326aaa2392354a9a6c274][0m
+[0m[1mdata.aws_ami.ubuntu_ami: Reading...[0m[0m
+[0m[1mdata.aws_ami.ubuntu_ami: Read complete after 0s [id=ami-0d4a2f1c20fcc71cb][0m
 
-Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
-  + create
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
 
 Terraform will perform the following actions:
 
-  # aws_instance.amazon-linux-instance will be created
-  + resource "aws_instance" "amazon-linux-instance" {
-      + ami                                  = "ami-0592c673f0b1e7665"
-      + arn                                  = (known after apply)
-      + associate_public_ip_address          = (known after apply)
-      + availability_zone                    = (known after apply)
-      + cpu_core_count                       = (known after apply)
-      + cpu_threads_per_core                 = (known after apply)
-      + disable_api_stop                     = (known after apply)
-      + disable_api_termination              = (known after apply)
-      + ebs_optimized                        = (known after apply)
-      + get_password_data                    = false
-      + host_id                              = (known after apply)
-      + host_resource_group_arn              = (known after apply)
-      + iam_instance_profile                 = (known after apply)
-      + id                                   = (known after apply)
-      + instance_initiated_shutdown_behavior = (known after apply)
-      + instance_lifecycle                   = (known after apply)
-      + instance_state                       = (known after apply)
-      + instance_type                        = "t2.micro"
-      + ipv6_address_count                   = (known after apply)
-      + ipv6_addresses                       = (known after apply)
-      + key_name                             = "ssh-keypair"
-      + monitoring                           = (known after apply)
-      + outpost_arn                          = (known after apply)
-      + password_data                        = (known after apply)
-      + placement_group                      = (known after apply)
-      + placement_partition_number           = (known after apply)
-      + primary_network_interface_id         = (known after apply)
-      + private_dns                          = (known after apply)
-      + private_ip                           = (known after apply)
-      + public_dns                           = (known after apply)
-      + public_ip                            = (known after apply)
-      + secondary_private_ips                = (known after apply)
-      + security_groups                      = (known after apply)
-      + source_dest_check                    = true
-      + spot_instance_request_id             = (known after apply)
-      + subnet_id                            = (known after apply)
-      + tags                                 = {
-          + "Name" = "amazon-linux-instance"
+[1m  # aws_instance.amazon-linux-instance[0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "amazon-linux-instance" {
+      [32m+[0m[0m ami                                  = "ami-0a544f69208f8fb74"
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = (known after apply)
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m cpu_core_count                       = (known after apply)
+      [32m+[0m[0m cpu_threads_per_core                 = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t2.micro"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = "ssh-keypair"
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+      [32m+[0m[0m subnet_id                            = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name" = "amazon-linux-instance"
         }
-      + tags_all                             = {
-          + "Name" = "amazon-linux-instance"
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name" = "amazon-linux-instance"
         }
-      + tenancy                              = (known after apply)
-      + user_data                            = (known after apply)
-      + user_data_base64                     = (known after apply)
-      + user_data_replace_on_change          = false
-      + vpc_security_group_ids               = (known after apply)
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = false
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
 
-      + capacity_reservation_specification (known after apply)
+      [32m+[0m[0m capacity_reservation_specification (known after apply)
 
-      + cpu_options (known after apply)
+      [32m+[0m[0m cpu_options (known after apply)
 
-      + ebs_block_device (known after apply)
+      [32m+[0m[0m ebs_block_device (known after apply)
 
-      + enclave_options (known after apply)
+      [32m+[0m[0m enclave_options (known after apply)
 
-      + ephemeral_block_device (known after apply)
+      [32m+[0m[0m ephemeral_block_device (known after apply)
 
-      + instance_market_options (known after apply)
+      [32m+[0m[0m instance_market_options (known after apply)
 
-      + maintenance_options (known after apply)
+      [32m+[0m[0m maintenance_options (known after apply)
 
-      + metadata_options (known after apply)
+      [32m+[0m[0m metadata_options (known after apply)
 
-      + network_interface (known after apply)
+      [32m+[0m[0m network_interface (known after apply)
 
-      + private_dns_name_options (known after apply)
+      [32m+[0m[0m private_dns_name_options (known after apply)
 
-      + root_block_device (known after apply)
+      [32m+[0m[0m root_block_device (known after apply)
     }
 
-  # aws_instance.test-instance will be created
-  + resource "aws_instance" "test-instance" {
-      + ami                                  = "ami-0d4a2f1c20fcc71cb"
-      + arn                                  = (known after apply)
-      + associate_public_ip_address          = (known after apply)
-      + availability_zone                    = (known after apply)
-      + cpu_core_count                       = (known after apply)
-      + cpu_threads_per_core                 = (known after apply)
-      + disable_api_stop                     = (known after apply)
-      + disable_api_termination              = (known after apply)
-      + ebs_optimized                        = (known after apply)
-      + get_password_data                    = false
-      + host_id                              = (known after apply)
-      + host_resource_group_arn              = (known after apply)
-      + iam_instance_profile                 = (known after apply)
-      + id                                   = (known after apply)
-      + instance_initiated_shutdown_behavior = (known after apply)
-      + instance_lifecycle                   = (known after apply)
-      + instance_state                       = (known after apply)
-      + instance_type                        = "t2.micro"
-      + ipv6_address_count                   = (known after apply)
-      + ipv6_addresses                       = (known after apply)
-      + key_name                             = "ssh-keypair"
-      + monitoring                           = (known after apply)
-      + outpost_arn                          = (known after apply)
-      + password_data                        = (known after apply)
-      + placement_group                      = (known after apply)
-      + placement_partition_number           = (known after apply)
-      + primary_network_interface_id         = (known after apply)
-      + private_dns                          = (known after apply)
-      + private_ip                           = (known after apply)
-      + public_dns                           = (known after apply)
-      + public_ip                            = (known after apply)
-      + secondary_private_ips                = (known after apply)
-      + security_groups                      = (known after apply)
-      + source_dest_check                    = true
-      + spot_instance_request_id             = (known after apply)
-      + subnet_id                            = (known after apply)
-      + tags                                 = {
-          + "Name" = "test-instance"
+[1m  # aws_instance.test-instance[0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "test-instance" {
+      [32m+[0m[0m ami                                  = "ami-0d4a2f1c20fcc71cb"
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = (known after apply)
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m cpu_core_count                       = (known after apply)
+      [32m+[0m[0m cpu_threads_per_core                 = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t2.micro"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = "ssh-keypair"
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+      [32m+[0m[0m subnet_id                            = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name" = "test-instance"
         }
-      + tags_all                             = {
-          + "Name" = "test-instance"
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name" = "test-instance"
         }
-      + tenancy                              = (known after apply)
-      + user_data                            = (known after apply)
-      + user_data_base64                     = (known after apply)
-      + user_data_replace_on_change          = false
-      + vpc_security_group_ids               = (known after apply)
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = (known after apply)
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = false
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
 
-      + capacity_reservation_specification (known after apply)
+      [32m+[0m[0m capacity_reservation_specification (known after apply)
 
-      + cpu_options (known after apply)
+      [32m+[0m[0m cpu_options (known after apply)
 
-      + ebs_block_device (known after apply)
+      [32m+[0m[0m ebs_block_device (known after apply)
 
-      + enclave_options (known after apply)
+      [32m+[0m[0m enclave_options (known after apply)
 
-      + ephemeral_block_device (known after apply)
+      [32m+[0m[0m ephemeral_block_device (known after apply)
 
-      + instance_market_options (known after apply)
+      [32m+[0m[0m instance_market_options (known after apply)
 
-      + maintenance_options (known after apply)
+      [32m+[0m[0m maintenance_options (known after apply)
 
-      + metadata_options (known after apply)
+      [32m+[0m[0m metadata_options (known after apply)
 
-      + network_interface (known after apply)
+      [32m+[0m[0m network_interface (known after apply)
 
-      + private_dns_name_options (known after apply)
+      [32m+[0m[0m private_dns_name_options (known after apply)
 
-      + root_block_device (known after apply)
+      [32m+[0m[0m root_block_device (known after apply)
     }
 
-  # aws_instance.ubuntu-instance will be created
-  + resource "aws_instance" "ubuntu-instance" {
-      + ami                                  = "ami-0d4a2f1c20fcc71cb"
-      + arn                                  = (known after apply)
-      + associate_public_ip_address          = (known after apply)
-      + availability_zone                    = (known after apply)
-      + cpu_core_count                       = (known after apply)
-      + cpu_threads_per_core                 = (known after apply)
-      + disable_api_stop                     = (known after apply)
-      + disable_api_termination              = (known after apply)
-      + ebs_optimized                        = (known after apply)
-      + get_password_data                    = false
-      + host_id                              = (known after apply)
-      + host_resource_group_arn              = (known after apply)
-      + iam_instance_profile                 = (known after apply)
-      + id                                   = (known after apply)
-      + instance_initiated_shutdown_behavior = (known after apply)
-      + instance_lifecycle                   = (known after apply)
-      + instance_state                       = (known after apply)
-      + instance_type                        = "t2.micro"
-      + ipv6_address_count                   = (known after apply)
-      + ipv6_addresses                       = (known after apply)
-      + key_name                             = "ssh-keypair"
-      + monitoring                           = (known after apply)
-      + outpost_arn                          = (known after apply)
-      + password_data                        = (known after apply)
-      + placement_group                      = (known after apply)
-      + placement_partition_number           = (known after apply)
-      + primary_network_interface_id         = (known after apply)
-      + private_dns                          = (known after apply)
-      + private_ip                           = (known after apply)
-      + public_dns                           = (known after apply)
-      + public_ip                            = (known after apply)
-      + secondary_private_ips                = (known after apply)
-      + security_groups                      = (known after apply)
-      + source_dest_check                    = true
-      + spot_instance_request_id             = (known after apply)
-      + subnet_id                            = (known after apply)
-      + tags                                 = {
-          + "Name" = "ubuntu-instance"
+[1m  # aws_instance.ubuntu-instance[0m will be created
+[0m  [32m+[0m[0m resource "aws_instance" "ubuntu-instance" {
+      [32m+[0m[0m ami                                  = "ami-0d4a2f1c20fcc71cb"
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m associate_public_ip_address          = (known after apply)
+      [32m+[0m[0m availability_zone                    = (known after apply)
+      [32m+[0m[0m cpu_core_count                       = (known after apply)
+      [32m+[0m[0m cpu_threads_per_core                 = (known after apply)
+      [32m+[0m[0m disable_api_stop                     = (known after apply)
+      [32m+[0m[0m disable_api_termination              = (known after apply)
+      [32m+[0m[0m ebs_optimized                        = (known after apply)
+      [32m+[0m[0m get_password_data                    = false
+      [32m+[0m[0m host_id                              = (known after apply)
+      [32m+[0m[0m host_resource_group_arn              = (known after apply)
+      [32m+[0m[0m iam_instance_profile                 = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_initiated_shutdown_behavior = (known after apply)
+      [32m+[0m[0m instance_lifecycle                   = (known after apply)
+      [32m+[0m[0m instance_state                       = (known after apply)
+      [32m+[0m[0m instance_type                        = "t2.micro"
+      [32m+[0m[0m ipv6_address_count                   = (known after apply)
+      [32m+[0m[0m ipv6_addresses                       = (known after apply)
+      [32m+[0m[0m key_name                             = "ssh-keypair"
+      [32m+[0m[0m monitoring                           = (known after apply)
+      [32m+[0m[0m outpost_arn                          = (known after apply)
+      [32m+[0m[0m password_data                        = (known after apply)
+      [32m+[0m[0m placement_group                      = (known after apply)
+      [32m+[0m[0m placement_partition_number           = (known after apply)
+      [32m+[0m[0m primary_network_interface_id         = (known after apply)
+      [32m+[0m[0m private_dns                          = (known after apply)
+      [32m+[0m[0m private_ip                           = (known after apply)
+      [32m+[0m[0m public_dns                           = (known after apply)
+      [32m+[0m[0m public_ip                            = (known after apply)
+      [32m+[0m[0m secondary_private_ips                = (known after apply)
+      [32m+[0m[0m security_groups                      = (known after apply)
+      [32m+[0m[0m source_dest_check                    = true
+      [32m+[0m[0m spot_instance_request_id             = (known after apply)
+      [32m+[0m[0m subnet_id                            = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name" = "ubuntu-instance"
         }
-      + tags_all                             = {
-          + "Name" = "ubuntu-instance"
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name" = "ubuntu-instance"
         }
-      + tenancy                              = (known after apply)
-      + user_data                            = "d2968c1e0503a549b19d5fea0033877f001f6c93"
-      + user_data_base64                     = (known after apply)
-      + user_data_replace_on_change          = true
-      + vpc_security_group_ids               = (known after apply)
+      [32m+[0m[0m tenancy                              = (known after apply)
+      [32m+[0m[0m user_data                            = "d2968c1e0503a549b19d5fea0033877f001f6c93"
+      [32m+[0m[0m user_data_base64                     = (known after apply)
+      [32m+[0m[0m user_data_replace_on_change          = true
+      [32m+[0m[0m vpc_security_group_ids               = (known after apply)
 
-      + capacity_reservation_specification (known after apply)
+      [32m+[0m[0m capacity_reservation_specification (known after apply)
 
-      + cpu_options (known after apply)
+      [32m+[0m[0m cpu_options (known after apply)
 
-      + ebs_block_device (known after apply)
+      [32m+[0m[0m ebs_block_device (known after apply)
 
-      + enclave_options (known after apply)
+      [32m+[0m[0m enclave_options (known after apply)
 
-      + ephemeral_block_device (known after apply)
+      [32m+[0m[0m ephemeral_block_device (known after apply)
 
-      + instance_market_options (known after apply)
+      [32m+[0m[0m instance_market_options (known after apply)
 
-      + maintenance_options (known after apply)
+      [32m+[0m[0m maintenance_options (known after apply)
 
-      + metadata_options (known after apply)
+      [32m+[0m[0m metadata_options (known after apply)
 
-      + network_interface (known after apply)
+      [32m+[0m[0m network_interface (known after apply)
 
-      + private_dns_name_options (known after apply)
+      [32m+[0m[0m private_dns_name_options (known after apply)
 
-      + root_block_device (known after apply)
+      [32m+[0m[0m root_block_device (known after apply)
     }
 
-  # aws_internet_gateway.gw will be created
-  + resource "aws_internet_gateway" "gw" {
-      + arn      = (known after apply)
-      + id       = (known after apply)
-      + owner_id = (known after apply)
-      + tags     = {
-          + "Name" = "Internet Gateway for Task 2"
+[1m  # aws_internet_gateway.gw[0m will be created
+[0m  [32m+[0m[0m resource "aws_internet_gateway" "gw" {
+      [32m+[0m[0m arn      = (known after apply)
+      [32m+[0m[0m id       = (known after apply)
+      [32m+[0m[0m owner_id = (known after apply)
+      [32m+[0m[0m tags     = {
+          [32m+[0m[0m "Name" = "Internet Gateway for Task 2"
         }
-      + tags_all = {
-          + "Name" = "Internet Gateway for Task 2"
+      [32m+[0m[0m tags_all = {
+          [32m+[0m[0m "Name" = "Internet Gateway for Task 2"
         }
-      + vpc_id   = (known after apply)
+      [32m+[0m[0m vpc_id   = (known after apply)
     }
 
-  # aws_key_pair.ssh-keypair will be created
-  + resource "aws_key_pair" "ssh-keypair" {
-      + arn             = (known after apply)
-      + fingerprint     = (known after apply)
-      + id              = (known after apply)
-      + key_name        = "ssh-keypair"
-      + key_name_prefix = (known after apply)
-      + key_pair_id     = (known after apply)
-      + key_type        = (known after apply)
-      + public_key      = (known after apply)
-      + tags_all        = (known after apply)
+[1m  # aws_key_pair.ssh-keypair[0m will be created
+[0m  [32m+[0m[0m resource "aws_key_pair" "ssh-keypair" {
+      [32m+[0m[0m arn             = (known after apply)
+      [32m+[0m[0m fingerprint     = (known after apply)
+      [32m+[0m[0m id              = (known after apply)
+      [32m+[0m[0m key_name        = "ssh-keypair"
+      [32m+[0m[0m key_name_prefix = (known after apply)
+      [32m+[0m[0m key_pair_id     = (known after apply)
+      [32m+[0m[0m key_type        = (known after apply)
+      [32m+[0m[0m public_key      = (known after apply)
+      [32m+[0m[0m tags_all        = (known after apply)
     }
 
-  # aws_route_table.internet-access-route will be created
-  + resource "aws_route_table" "internet-access-route" {
-      + arn              = (known after apply)
-      + id               = (known after apply)
-      + owner_id         = (known after apply)
-      + propagating_vgws = (known after apply)
-      + route            = [
-          + {
-              + cidr_block                 = "0.0.0.0/0"
-              + gateway_id                 = (known after apply)
-                # (11 unchanged attributes hidden)
+[1m  # aws_route_table.internet-access-route[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table" "internet-access-route" {
+      [32m+[0m[0m arn              = (known after apply)
+      [32m+[0m[0m id               = (known after apply)
+      [32m+[0m[0m owner_id         = (known after apply)
+      [32m+[0m[0m propagating_vgws = (known after apply)
+      [32m+[0m[0m route            = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_block                 = "0.0.0.0/0"
+              [32m+[0m[0m gateway_id                 = (known after apply)
+                [90m# (11 unchanged attributes hidden)[0m[0m
             },
         ]
-      + tags_all         = (known after apply)
-      + vpc_id           = (known after apply)
+      [32m+[0m[0m tags_all         = (known after apply)
+      [32m+[0m[0m vpc_id           = (known after apply)
     }
 
-  # aws_route_table_association.public-subnet-internet-gateway-connection will be created
-  + resource "aws_route_table_association" "public-subnet-internet-gateway-connection" {
-      + id             = (known after apply)
-      + route_table_id = (known after apply)
-      + subnet_id      = (known after apply)
+[1m  # aws_route_table_association.public-subnet-internet-gateway-connection[0m will be created
+[0m  [32m+[0m[0m resource "aws_route_table_association" "public-subnet-internet-gateway-connection" {
+      [32m+[0m[0m id             = (known after apply)
+      [32m+[0m[0m route_table_id = (known after apply)
+      [32m+[0m[0m subnet_id      = (known after apply)
     }
 
-  # aws_security_group.sg-allow-internet-access will be created
-  + resource "aws_security_group" "sg-allow-internet-access" {
-      + arn                    = (known after apply)
-      + description            = "Managed by Terraform"
-      + egress                 = [
-          + {
-              + cidr_blocks      = [
-                  + "0.0.0.0/0",
+[1m  # aws_security_group.sg-allow-internet-access[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "sg-allow-internet-access" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Managed by Terraform"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
                 ]
-              + from_port        = 0
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "-1"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 0
-                # (1 unchanged attribute hidden)
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
         ]
-      + id                     = (known after apply)
-      + ingress                = [
-          + {
-              + cidr_blocks      = [
-                  + "0.0.0.0/0",
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
                 ]
-              + from_port        = -1
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "icmp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = -1
-                # (1 unchanged attribute hidden)
+              [32m+[0m[0m from_port        = -1
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "icmp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = -1
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
-          + {
-              + cidr_blocks      = [
-                  + "0.0.0.0/0",
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
                 ]
-              + from_port        = 22
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "tcp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 22
-                # (1 unchanged attribute hidden)
+              [32m+[0m[0m from_port        = 22
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
-          + {
-              + cidr_blocks      = [
-                  + "0.0.0.0/0",
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
                 ]
-              + from_port        = 443
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "tcp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 443
-                # (1 unchanged attribute hidden)
+              [32m+[0m[0m from_port        = 443
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 443
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
-          + {
-              + cidr_blocks      = [
-                  + "0.0.0.0/0",
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = [
+                  [32m+[0m[0m "0.0.0.0/0",
                 ]
-              + from_port        = 80
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "tcp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 80
-                # (1 unchanged attribute hidden)
+              [32m+[0m[0m from_port        = 80
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
         ]
-      + name                   = "allow-internet-access"
-      + name_prefix            = (known after apply)
-      + owner_id               = (known after apply)
-      + revoke_rules_on_delete = false
-      + tags_all               = (known after apply)
-      + vpc_id                 = (known after apply)
+      [32m+[0m[0m name                   = "allow-internet-access"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
     }
 
-  # aws_security_group.sg-allow-subnet-access will be created
-  + resource "aws_security_group" "sg-allow-subnet-access" {
-      + arn                    = (known after apply)
-      + description            = "Managed by Terraform"
-      + egress                 = [
-          + {
-              + cidr_blocks      = (known after apply)
-              + from_port        = 0
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "-1"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 0
-                # (1 unchanged attribute hidden)
+[1m  # aws_security_group.sg-allow-subnet-access[0m will be created
+[0m  [32m+[0m[0m resource "aws_security_group" "sg-allow-subnet-access" {
+      [32m+[0m[0m arn                    = (known after apply)
+      [32m+[0m[0m description            = "Managed by Terraform"
+      [32m+[0m[0m egress                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = (known after apply)
+              [32m+[0m[0m from_port        = 0
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "-1"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 0
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
         ]
-      + id                     = (known after apply)
-      + ingress                = [
-          + {
-              + cidr_blocks      = (known after apply)
-              + from_port        = -1
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "icmp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = -1
-                # (1 unchanged attribute hidden)
+      [32m+[0m[0m id                     = (known after apply)
+      [32m+[0m[0m ingress                = [
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = (known after apply)
+              [32m+[0m[0m from_port        = -1
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "icmp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = -1
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
-          + {
-              + cidr_blocks      = (known after apply)
-              + from_port        = 22
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "tcp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 22
-                # (1 unchanged attribute hidden)
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = (known after apply)
+              [32m+[0m[0m from_port        = 22
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 22
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
-          + {
-              + cidr_blocks      = (known after apply)
-              + from_port        = 443
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "tcp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 443
-                # (1 unchanged attribute hidden)
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = (known after apply)
+              [32m+[0m[0m from_port        = 443
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 443
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
-          + {
-              + cidr_blocks      = (known after apply)
-              + from_port        = 80
-              + ipv6_cidr_blocks = []
-              + prefix_list_ids  = []
-              + protocol         = "tcp"
-              + security_groups  = []
-              + self             = false
-              + to_port          = 80
-                # (1 unchanged attribute hidden)
+          [32m+[0m[0m {
+              [32m+[0m[0m cidr_blocks      = (known after apply)
+              [32m+[0m[0m from_port        = 80
+              [32m+[0m[0m ipv6_cidr_blocks = []
+              [32m+[0m[0m prefix_list_ids  = []
+              [32m+[0m[0m protocol         = "tcp"
+              [32m+[0m[0m security_groups  = []
+              [32m+[0m[0m self             = false
+              [32m+[0m[0m to_port          = 80
+                [90m# (1 unchanged attribute hidden)[0m[0m
             },
         ]
-      + name                   = "allow-subnet-access"
-      + name_prefix            = (known after apply)
-      + owner_id               = (known after apply)
-      + revoke_rules_on_delete = false
-      + tags_all               = (known after apply)
-      + vpc_id                 = (known after apply)
+      [32m+[0m[0m name                   = "allow-subnet-access"
+      [32m+[0m[0m name_prefix            = (known after apply)
+      [32m+[0m[0m owner_id               = (known after apply)
+      [32m+[0m[0m revoke_rules_on_delete = false
+      [32m+[0m[0m tags_all               = (known after apply)
+      [32m+[0m[0m vpc_id                 = (known after apply)
     }
 
-  # aws_subnet.public-subnet will be created
-  + resource "aws_subnet" "public-subnet" {
-      + arn                                            = (known after apply)
-      + assign_ipv6_address_on_creation                = false
-      + availability_zone                              = (known after apply)
-      + availability_zone_id                           = (known after apply)
-      + cidr_block                                     = "10.0.0.0/28"
-      + enable_dns64                                   = false
-      + enable_resource_name_dns_a_record_on_launch    = false
-      + enable_resource_name_dns_aaaa_record_on_launch = false
-      + id                                             = (known after apply)
-      + ipv6_cidr_block_association_id                 = (known after apply)
-      + ipv6_native                                    = false
-      + map_public_ip_on_launch                        = true
-      + owner_id                                       = (known after apply)
-      + private_dns_hostname_type_on_launch            = (known after apply)
-      + tags                                           = {
-          + "Name" = "Public Subnet for Task 2"
+[1m  # aws_subnet.public-subnet[0m will be created
+[0m  [32m+[0m[0m resource "aws_subnet" "public-subnet" {
+      [32m+[0m[0m arn                                            = (known after apply)
+      [32m+[0m[0m assign_ipv6_address_on_creation                = false
+      [32m+[0m[0m availability_zone                              = (known after apply)
+      [32m+[0m[0m availability_zone_id                           = (known after apply)
+      [32m+[0m[0m cidr_block                                     = "10.0.0.0/28"
+      [32m+[0m[0m enable_dns64                                   = false
+      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
+      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
+      [32m+[0m[0m id                                             = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
+      [32m+[0m[0m ipv6_native                                    = false
+      [32m+[0m[0m map_public_ip_on_launch                        = true
+      [32m+[0m[0m owner_id                                       = (known after apply)
+      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
+      [32m+[0m[0m tags                                           = {
+          [32m+[0m[0m "Name" = "Public Subnet for Task 2"
         }
-      + tags_all                                       = {
-          + "Name" = "Public Subnet for Task 2"
+      [32m+[0m[0m tags_all                                       = {
+          [32m+[0m[0m "Name" = "Public Subnet for Task 2"
         }
-      + vpc_id                                         = (known after apply)
+      [32m+[0m[0m vpc_id                                         = (known after apply)
     }
 
-  # aws_vpc.main will be created
-  + resource "aws_vpc" "main" {
-      + arn                                  = (known after apply)
-      + cidr_block                           = "10.0.0.0/28"
-      + default_network_acl_id               = (known after apply)
-      + default_route_table_id               = (known after apply)
-      + default_security_group_id            = (known after apply)
-      + dhcp_options_id                      = (known after apply)
-      + enable_dns_hostnames                 = true
-      + enable_dns_support                   = true
-      + enable_network_address_usage_metrics = (known after apply)
-      + id                                   = (known after apply)
-      + instance_tenancy                     = "default"
-      + ipv6_association_id                  = (known after apply)
-      + ipv6_cidr_block                      = (known after apply)
-      + ipv6_cidr_block_network_border_group = (known after apply)
-      + main_route_table_id                  = (known after apply)
-      + owner_id                             = (known after apply)
-      + tags                                 = {
-          + "Name" = "VPC for Task 2"
+[1m  # aws_vpc.main[0m will be created
+[0m  [32m+[0m[0m resource "aws_vpc" "main" {
+      [32m+[0m[0m arn                                  = (known after apply)
+      [32m+[0m[0m cidr_block                           = "10.0.0.0/28"
+      [32m+[0m[0m default_network_acl_id               = (known after apply)
+      [32m+[0m[0m default_route_table_id               = (known after apply)
+      [32m+[0m[0m default_security_group_id            = (known after apply)
+      [32m+[0m[0m dhcp_options_id                      = (known after apply)
+      [32m+[0m[0m enable_dns_hostnames                 = true
+      [32m+[0m[0m enable_dns_support                   = true
+      [32m+[0m[0m enable_network_address_usage_metrics = (known after apply)
+      [32m+[0m[0m id                                   = (known after apply)
+      [32m+[0m[0m instance_tenancy                     = "default"
+      [32m+[0m[0m ipv6_association_id                  = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block                      = (known after apply)
+      [32m+[0m[0m ipv6_cidr_block_network_border_group = (known after apply)
+      [32m+[0m[0m main_route_table_id                  = (known after apply)
+      [32m+[0m[0m owner_id                             = (known after apply)
+      [32m+[0m[0m tags                                 = {
+          [32m+[0m[0m "Name" = "VPC for Task 2"
         }
-      + tags_all                             = {
-          + "Name" = "VPC for Task 2"
+      [32m+[0m[0m tags_all                             = {
+          [32m+[0m[0m "Name" = "VPC for Task 2"
         }
     }
 
-  # local_file.ssh-keypair-private-key will be created
-  + resource "local_file" "ssh-keypair-private-key" {
-      + content              = (sensitive value)
-      + content_base64sha256 = (known after apply)
-      + content_base64sha512 = (known after apply)
-      + content_md5          = (known after apply)
-      + content_sha1         = (known after apply)
-      + content_sha256       = (known after apply)
-      + content_sha512       = (known after apply)
-      + directory_permission = "0777"
-      + file_permission      = "0777"
-      + filename             = "e2-key.pem"
-      + id                   = (known after apply)
+[1m  # local_file.ssh-keypair-private-key[0m will be created
+[0m  [32m+[0m[0m resource "local_file" "ssh-keypair-private-key" {
+      [32m+[0m[0m content              = (sensitive value)
+      [32m+[0m[0m content_base64sha256 = (known after apply)
+      [32m+[0m[0m content_base64sha512 = (known after apply)
+      [32m+[0m[0m content_md5          = (known after apply)
+      [32m+[0m[0m content_sha1         = (known after apply)
+      [32m+[0m[0m content_sha256       = (known after apply)
+      [32m+[0m[0m content_sha512       = (known after apply)
+      [32m+[0m[0m directory_permission = "0777"
+      [32m+[0m[0m file_permission      = "0777"
+      [32m+[0m[0m filename             = "e2-key.pem"
+      [32m+[0m[0m id                   = (known after apply)
     }
 
-  # tls_private_key.rsa will be created
-  + resource "tls_private_key" "rsa" {
-      + algorithm                     = "RSA"
-      + ecdsa_curve                   = "P224"
-      + id                            = (known after apply)
-      + private_key_openssh           = (sensitive value)
-      + private_key_pem               = (sensitive value)
-      + private_key_pem_pkcs8         = (sensitive value)
-      + public_key_fingerprint_md5    = (known after apply)
-      + public_key_fingerprint_sha256 = (known after apply)
-      + public_key_openssh            = (known after apply)
-      + public_key_pem                = (known after apply)
-      + rsa_bits                      = 4096
+[1m  # tls_private_key.rsa[0m will be created
+[0m  [32m+[0m[0m resource "tls_private_key" "rsa" {
+      [32m+[0m[0m algorithm                     = "RSA"
+      [32m+[0m[0m ecdsa_curve                   = "P224"
+      [32m+[0m[0m id                            = (known after apply)
+      [32m+[0m[0m private_key_openssh           = (sensitive value)
+      [32m+[0m[0m private_key_pem               = (sensitive value)
+      [32m+[0m[0m private_key_pem_pkcs8         = (sensitive value)
+      [32m+[0m[0m public_key_fingerprint_md5    = (known after apply)
+      [32m+[0m[0m public_key_fingerprint_sha256 = (known after apply)
+      [32m+[0m[0m public_key_openssh            = (known after apply)
+      [32m+[0m[0m public_key_pem                = (known after apply)
+      [32m+[0m[0m rsa_bits                      = 4096
     }
 
-Plan: 13 to add, 0 to change, 0 to destroy.
-
+[1mPlan:[0m 13 to add, 0 to change, 0 to destroy.
+[0m
 Changes to Outputs:
-  + amazon_linux_private_ip = (known after apply)
-  + private_key             = (sensitive value)
-  + ubuntu_private_ip       = (known after apply)
-  + ubuntu_public_ip        = (known after apply)
+  [32m+[0m[0m amazon_linux_private_ip = (known after apply)
+  [32m+[0m[0m private_key             = (sensitive value)
+  [32m+[0m[0m ubuntu_private_ip       = (known after apply)
+  [32m+[0m[0m ubuntu_public_ip        = (known after apply)
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

@@ -182,27 +182,9 @@ data "aws_ami" "ubuntu_ami" {
     }
 }
 
-data "aws_ami" "amazon_linux_ami" {
-    most_recent = true
-    owners = ["amazon"]
-    filter {
-        name = "name"
-        values = ["al2023-ami-2023.5.20241001.1-kernel-6.1-x86_64"]
-    }
-    filter {
-        name   = "root-device-type"
-        values = ["ebs"]
-    }
-
-    filter {
-        name   = "virtualization-type"
-        values = ["hvm"]
-    }
-}
-
 resource "aws_instance" "amazon-linux-instance" {
     instance_type = "t2.micro"
-    ami = data.aws_ami.amazon_linux_ami.id
+    ami = "ami-0a544f69208f8fb74"
     subnet_id = aws_subnet.public-subnet.id
     vpc_security_group_ids = [aws_security_group.sg-allow-subnet-access.id]
     key_name = "ssh-keypair"
